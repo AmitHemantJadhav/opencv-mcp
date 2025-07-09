@@ -1,0 +1,27 @@
+{
+  "name": "imageAnalyzer",
+  "description": "Analyzes an image and returns metadata like size, grayscale status, and edge count",
+  "version": "1.0.0",
+  "url": "https://opencv-mcp.vercel.app/api/analyze-image",
+  "schema": {
+    "input": {
+      "type": "object",
+      "properties": {
+        "imageUrl": {
+          "type": "string",
+          "description": "Direct URL to the image to analyze"
+        }
+      },
+      "required": ["imageUrl"]
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "width": { "type": "number" },
+        "height": { "type": "number" },
+        "isGrayscale": { "type": "boolean" },
+        "edgeCount": { "type": "number" }
+      }
+    }
+  }
+}
